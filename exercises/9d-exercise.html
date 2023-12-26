@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>9D exercise</title>
+</head>
+<body>
+
+  <p>
+    <input placeholder="Name" 
+    class="js-name-input"
+    onkeydown="
+    if (event.key === 'Enter'){
+      getTheChoice()
+    }">
+
+    <button onclick="
+    getTheChoice()">
+    Submit</button>
+
+    <p class="js-message"></p>
+
+  </p>
+
+  <p>
+    <input placeholder="Drink" class="js-drink-input">
+
+    <button onclick="
+    const inputElementDrink = document.querySelector('.js-drink-input');
+    document.querySelector('.js-drink-choice').innerHTML=`Your drink is: ${inputElementDrink.value}`"
+    >Submit</button>
+
+    <p class="js-drink-choice"></p>
+
+
+  </p>
+
+  <p>
+
+    <input placeholder="Singer" class="js-singer-choice">
+
+    <button onclick="
+      const singerChoice = document.querySelector('.js-singer-choice');
+
+      document.querySelector('.js-singer-input').innerHTML=`Your favorite artist is: ${singerChoice.value}`">
+
+      Submit
+    </button>
+
+    <p class="js-singer-input"></p>
+
+    <p>
+      <input class="js-russian-salad-input"
+      placeholder="Your favorite salad">
+
+      <button onclick="
+       const saladChoice = document.querySelector('.js-russian-salad-input');
+
+       document.querySelector('.js-salad-choice').innerHTML=`Your favorite Russian salad is: ${saladChoice.value}`">
+
+        Submit
+      </button>
+
+      <p class="js-salad-choice"></P>
+    </p>
+
+  </p>
+
+  <p>
+    <input placeholder="Your fav rapper";
+    class="js-favorite-rapper">
+
+    <button onclick="
+      const favoriteRapper = document.querySelector('.js-favorite-rapper')
+      document.querySelector('.js-rapper-input').innerHTML=`Your favorite rapper is: ${favoriteRapper.value}`">
+      Submit
+    </button>
+
+    <p class="js-rapper-input"></p>
+
+
+
+
+
+
+
+
+
+  </p>
+
+  <script>
+    function getTheChoice() {
+      const inputElement = document.querySelector('.js-name-input');
+      document.querySelector ('.js-message').innerHTML=`Your name is: ${inputElement.value}`
+    }
+
+    
+   
+
+
+
+  </script>
+  
+</body>
+</html>
