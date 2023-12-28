@@ -1,0 +1,40 @@
+body {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button-style {
+  height: 60px;
+  width: 60px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(79, 79, 79);
+  color: white;
+  margin-right: 5px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.button-style:hover {
+  opacity: 0.9;
+}
+
+.button-style:active {
+  opacity: 0.7;
+}
+
+.orange-button-style {
+  background-color: orange;
+}
+
+.calculation {
+  color: white;
+  font-size: 45px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+
+}
+
+.clear-button-style {
+  font-size: 15px;
+}

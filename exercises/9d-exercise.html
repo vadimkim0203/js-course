@@ -11,11 +11,11 @@
     class="js-name-input"
     onkeydown="
     if (event.key === 'Enter'){
-      getTheChoice()
+      getTheChoiceName()
     }">
 
     <button onclick="
-    getTheChoice()">
+    getTheChoiceName()">
     Submit</button>
 
     <p class="js-message"></p>
@@ -37,13 +37,14 @@
 
   <p>
 
-    <input placeholder="Singer" class="js-singer-choice">
+    <input onkeydown="
+      if (event.key === 'Enter') {
+        getTheChoiceSinger()
+      }" 
+      placeholder="Singer" class="js-singer-choice">
 
     <button onclick="
-      const singerChoice = document.querySelector('.js-singer-choice');
-
-      document.querySelector('.js-singer-input').innerHTML=`Your favorite artist is: ${singerChoice.value}`">
-
+      getTheChoiceSinger();">
       Submit
     </button>
 
@@ -89,9 +90,14 @@
   </p>
 
   <script>
-    function getTheChoice() {
+    function getTheChoiceName() {
       const inputElement = document.querySelector('.js-name-input');
       document.querySelector ('.js-message').innerHTML=`Your name is: ${inputElement.value}`
+    }
+
+    function getTheChoiceSinger() {
+      const inputElement = document.querySelector('.js-singer-choice');
+      document.querySelector('.singer-input').innerHTML=`Your favorite artist is: ${singerChoice.value}`
     }
 
     
