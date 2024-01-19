@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>12 Exercises</title>
+</head>
+
+<body>
+  <button class="js-onclick" onclick="updateButton();">Start</button>
+
+  <div>
+    <button class="js-push-button" onclick="addToCart()">Add to cart</button>
+    <p class="messageAlert"></p>
+  </div>
+  
+
+  <script>
+
+    function updateButton() {
+
+      const btn = document.querySelector('.js-onclick');
+
+      if (btn.innerText === 'Start') {
+        btn.innerHTML = 'Loading...'
+      }; 
+      
+        setTimeout(function() {
+        btn.innerHTML = 'Finished!';
+      }, 1000);
+    }
+
+    function addToCart () {
+      const message = document.querySelector('.messageAlert');
+      message.innerHTML = 'Added';
+
+      setTimeout(function() {
+        message.innerHTML = '';
+      }, 2000);
+
+
+    }
+
+
+  
+
+  </script>
+  
+</body>
+</html>
