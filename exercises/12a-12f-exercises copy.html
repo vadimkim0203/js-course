@@ -28,15 +28,17 @@
       }, 1000);
     }
 
+    let timeoutID;
+
     function addToCart () {
       const message = document.querySelector('.messageAlert');
       message.innerHTML = 'Added';
 
-      setTimeout(function() {
+      clearTimeout(timeoutID);
+
+      timeoutID = setTimeout(function() {
         message.innerHTML = '';
       }, 2000);
-
-
     }
 
 

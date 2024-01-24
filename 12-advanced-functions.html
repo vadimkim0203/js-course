@@ -8,7 +8,27 @@
 </head>
 
 <body>
+
+  <button onclick="" class="js-button">Click</button>
+
   <script>
+    const buttonElement = document.querySelector('.js-button');
+
+    const eventListener = () => {
+      console.log('click');
+    };
+
+    buttonElement.addEventListener('click', 
+    eventListener);
+    
+    buttonElement.removeEventListener('click', eventListener);
+
+    buttonElement.addEventListener('click', () => {
+      console.log('click2');
+    });
+
+
+
     /*
     function greeting () {
       console.log('hello');
@@ -46,7 +66,7 @@
       run(function() {
         console.log('hello4')
       });
-      */
+      
 
       setTimeout(function() {
         console.log('timeout');
@@ -65,13 +85,48 @@
         'make dinner',
         'wash dishes',
         'watch youtube'
-      ]. forEach(function(value, index) {
+      ]. forEach((value, index) => {
         if(value === 'wash dishes'){
           return;
         }
         console.log(index);
         console.log(value);
       });
+      
+
+      const regularFunction = function(param, param2) {
+        console.log('hello')
+        return 5;
+      };
+
+      const arrowFunction = (param, param2) => {
+        console.log('hello');
+        return 5;
+      };
+
+      arrowFunction();
+
+      const oneParam = param => {
+        //when there's just one parameter, we can skip round brackets
+        console.log(param + 1);
+        // the output above is going to be 3
+      };
+      oneParam(2);
+
+      const oneLine = () => 2 + 3;
+      console.log(oneLine())
+      //when the function has only one line as above, we can skip curly brackets as well as return statement
+
+      const object2 = {
+        method: () => {
+        },
+        // below is a shorhand method of using function in objects (instead of using arrow method)
+        method() {
+        }
+      };
+
+      */
+
 
   </script>
   
